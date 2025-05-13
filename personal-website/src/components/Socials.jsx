@@ -14,6 +14,7 @@ const Socials = () => {
             rel="noopener noreferrer"
           >
             <svg
+              className="socials__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -32,6 +33,7 @@ const Socials = () => {
             rel="noopener noreferrer"
           >
             <svg
+              className="socials__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -50,6 +52,7 @@ const Socials = () => {
             rel="noopener noreferrer"
           >
             <svg
+              className="socials__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -63,6 +66,7 @@ const Socials = () => {
         <li className="socials__item">
           <a className="socials__link" href="mailto:youremail@example.com">
             <svg
+              className="socials__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

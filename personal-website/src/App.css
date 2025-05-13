@@ -4,7 +4,22 @@
   padding: 2rem;
   text-align: center;
   min-height: 100vh;
+  display: flex; /* Ensure flex layout for proper alignment */
   flex-direction: column;
+}
+
+.app {
+  position: relative; /* Ensure the app is positioned above the background */
+  z-index: 1; /* Higher than the background */
+  min-height: 100vh; /* Ensure the app spans the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out content vertically */
+}
+
+.app-content {
+  padding: 2rem;
+  flex: 1; /* Allow the content to grow and fill available space */
 }
 
 .logo {
@@ -13,14 +28,17 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
 .app.dark-mode .about__title {
-  color: var(--dark-accent); /* Accent color for dark mode */
+  color: var(--dark-accent);
 }
 
 @keyframes logo-spin {
@@ -44,4 +62,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Ensure the footer stays at the bottom */
+.footer {
+  z-index: 1;
+  margin-top: auto; /* Push the footer to the bottom of the app */
 }
