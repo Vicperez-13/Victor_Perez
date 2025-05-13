@@ -10,24 +10,38 @@
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column; /* Stack the title and nav vertically */
+  align-items: center; /* Center align the content */
+  gap: 1rem; /* Add spacing between the title and nav */
 }
+
 .header__title {
   color: var(--light-accent);
   margin: 0;
   padding: 0;
+  text-align: center; /* Center align the title */
 }
+
 .app.dark-mode .header__title {
   color: var(--dark-accent);
 }
+
 .header__link {
+  font-size: 1.2rem; /* Adjust font size for the links */
+  font-weight: bold; /* Make the links bold */
+  margin: 0;
   text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
+  color: inherit; /* Inherit the color from the container */
+  position: absolute;
+  top: 0.5rem; /* Position the link in the top-left corner */
+  left: 0.5rem;
 }
+
 .header__link:hover {
   color: var(--header-link-hover-color-light);
+  background-color: var(
+    --header-link-hover-bg-color
+  ); /* Change background on hover */
 }
 
 .app.dark-mode .header__link:hover {
@@ -41,7 +55,99 @@
 
 .header__nav {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column; /* Stack the nav links vertically */
+  gap: 1rem; /* Add spacing between the nav containers */
+  width: 100%; /* Make the nav take full width */
+  align-items: center; /* Center align the nav containers */
+}
+
+.header__nav-container {
+  position: relative; /* Set position to relative for positioning child elements */
+  width: 80%; /* Set a consistent width for the container boxes */
+  height: 6rem; /* Increase the height of the boxes */
+  padding: 1rem; /* Add padding inside the container */
+  background-color: var(
+    --header-link-bg-color,
+    #ffffff
+  ); /* Solid background color */
+  border: 1px solid var(--header-link-border-color, #cccccc); /* Add a border */
+  border-radius: 8px; /* Round the corners of the container */
+  box-shadow: 0 0 5px 1px var(--light-accent, rgba(0, 0, 0, 0.1)); /* Subtle shadow for default state */
+  text-align: left; /* Align text to the left */
+  color: var(--header-text-color, #000000); /* Ensure consistent text color */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Make the container clickable */
+}
+
+.app.dark-mode .header__nav-container {
+  background-color: var(
+    --dark-background,
+    #1a1a1a
+  ); /* Solid background color for dark mode */
+  border: 1px solid var(--dark-accent, #ffffff); /* Border color for dark mode */
+  box-shadow: 0 0 5px 1px var(--dark-accent, rgba(255, 255, 255, 0.1)); /* Subtle shadow for dark mode */
+  color: var(
+    --dark-text,
+    #ffffff
+  ); /* Ensure consistent text color for dark mode */
+}
+
+.header__nav-container:hover {
+  transform: scale(1.02); /* Slightly enlarge the container on hover */
+  box-shadow: 0 0 15px 2px var(--light-accent, rgba(0, 0, 0, 0.2)); /* Bright glow on hover for light mode */
+}
+
+.app.dark-mode .header__nav-container:hover {
+  box-shadow: 0 0 15px 2px var(--dark-accent, rgba(255, 255, 255, 0.4)); /* Bright glow on hover for dark mode */
+}
+
+.header__nav-container::after {
+  content: ""; /* Default content is empty */
+  position: absolute;
+  top: 100%; /* Position below the container */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  background-color: var(
+    --header-link-hover-bg-color
+  ); /* Background for the tooltip */
+  color: var(--header-text-color); /* Text color */
+  padding: 0.5rem 1rem; /* Add padding for the tooltip */
+  border-radius: 4px; /* Round the corners of the tooltip */
+  font-size: 0.9rem; /* Adjust font size */
+  white-space: nowrap; /* Prevent text wrapping */
+  opacity: 0; /* Hide by default */
+  pointer-events: none; /* Prevent interaction */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header__nav-container:hover::after {
+  opacity: 1; /* Show the tooltip on hover */
+  transform: translateX(-50%) translateY(0.5rem); /* Slightly move the tooltip down */
+}
+
+.header__nav-container:nth-child(1)::after {
+  content: "Go to the homepage"; /* Tooltip for the Home link */
+}
+
+.header__nav-container:nth-child(2)::after {
+  content: "Learn more about me"; /* Tooltip for the About link */
+}
+
+.header__nav-container:nth-child(3)::after {
+  content: "View my work experience"; /* Tooltip for the Work Experience link */
+}
+
+.header__nav-container.hidden {
+  display: none; /* Hide the box when redirected */
+}
+
+.header__description {
+  font-size: 0.9rem; /* Adjust font size for the description */
+  color: inherit; /* Inherit the color from the container */
+  position: absolute;
+  bottom: 0.5rem; /* Position the description in the bottom-left corner */
+  left: 0.5rem;
+  margin: 0;
 }
 
 .header__nav-link {
@@ -53,6 +159,7 @@
 .header__nav-link:hover {
   color: var(--header-link-hover-color);
 }
+
 .header__theme-toggle {
   cursor: pointer;
   padding-top: 13px;
@@ -75,4 +182,20 @@
 
 .header__social-icon:hover {
   transform: scale(1.1);
+}
+
+.header__back-arrow {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--header-text-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header__back-arrow:hover {
+  color: var(--header-link-hover-color);
 }

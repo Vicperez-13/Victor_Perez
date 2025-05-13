@@ -3,6 +3,7 @@
   padding: 5rem 2rem 7rem;
   box-sizing: border-box;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative; /* Ensure proper stacking context */
   z-index: 2; /* Place above the Tron-like background */
   background-color: transparent; /* Remove the background color */

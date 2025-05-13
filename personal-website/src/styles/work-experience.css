@@ -1,31 +1,74 @@
 .work-experience {
-    padding: 20px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+  padding: 20px;
+  background-color: var(
+    --background-color,
+    #ffffff
+  ); /* Solid background color */
+  color: var(--text-color, #000000); /* Text color for light mode */
+  border-radius: 8px; /* Round the corners of the container */
+  box-shadow: 0 0 5px 1px var(--light-accent, rgba(0, 0, 0, 0.1)); /* Subtle glow for default state */
+  text-align: left; /* Align all text to the left */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.app.dark-mode .work-experience {
+  background-color: var(
+    --dark-background,
+    #1a1a1a
+  ); /* Solid background color for dark mode */
+  color: var(--dark-text, #ffffff); /* Text color for dark mode */
+  box-shadow: 0 0 5px 1px var(--dark-accent, rgba(255, 255, 255, 0.1)); /* Subtle glow for dark mode */
+}
+
+.work-experience:hover {
+  transform: scale(1.02); /* Slightly enlarge the container on hover */
+  box-shadow: 0 0 15px 2px var(--light-accent, rgba(0, 0, 0, 0.2)); /* Bright glow on hover for light mode */
+}
+
+.app.dark-mode .work-experience:hover {
+  box-shadow: 0 0 15px 2px var(--dark-accent, rgba(255, 255, 255, 0.4)); /* Bright glow on hover for dark mode */
 }
 
 .work-experience__title {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: left; /* Ensure title aligns to the left */
 }
 
 .work-experience__job {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: left; /* Align job section to the left */
 }
 
 .work-experience__job-title {
-    font-weight: bold;
+  font-weight: bold;
+  text-align: left; /* Align job title to the left */
 }
 
 .work-experience__company {
-    font-style: italic;
+  font-style: italic;
+  text-align: left; /* Align company name to the left */
 }
 
 .work-experience__duration {
-    color: var(--secondary-text-color);
+  color: var(--secondary-text-color);
+  text-align: left; /* Align duration to the left */
 }
 
 .work-experience__description {
-    margin-top: 5px;
-    line-height: 1.5;
+  margin-top: 5px;
+  line-height: 1.5;
+  text-align: left; /* Align description to the left */
+}
+
+.work-experience__item-skills {
+  list-style-type: disc; /* Use bullets for the list */
+  padding-left: 1.5rem; /* Add padding for bullets */
+  margin: 0; /* Reset any default margin */
+  text-align: left; /* Align the list to the left */
+}
+
+.work-experience__item-skills li {
+  margin-bottom: 0.5rem; /* Add spacing between list items */
+  text-align: left; /* Ensure list items align to the left */
 }
