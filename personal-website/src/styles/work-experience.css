@@ -1,0 +1,31 @@
+.work-experience {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.work-experience__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.work-experience__job {
+    margin-bottom: 15px;
+}
+
+.work-experience__job-title {
+    font-weight: bold;
+}
+
+.work-experience__company {
+    font-style: italic;
+}
+
+.work-experience__duration {
+    color: var(--secondary-text-color);
+}
+
+.work-experience__description {
+    margin-top: 5px;
+    line-height: 1.5;
+}

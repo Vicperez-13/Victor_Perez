@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: var(--header-link-hover-color);
+}
+
+.header__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__social-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.header__social-icon:hover {
+  transform: scale(1.1);
+}
