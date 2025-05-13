@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/slideshow.css";
-import nextIcon from "../assets/next.png";
-import prevIcon from "../assets/backArrow.png";
+import nextIcon from "../assets/next.svg";
+import prevIcon from "../assets/backArrow.svg";
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
