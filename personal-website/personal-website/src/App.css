@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
+  max-width: min(90%, 1600px);
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .logo {
@@ -16,6 +18,9 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.app.dark-mode .about__title {
+  color: var(--dark-accent); /* Accent color for dark mode */
 }
 
 @keyframes logo-spin {

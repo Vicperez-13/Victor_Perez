@@ -2,8 +2,22 @@
   --light-background: #ffffff; /* Cinnamoroll vibe */
   --light-text: #333333;
   --light-accent: #ffb3b3; /* Soft pink for accents */
-  
-  --dark-background: #1a1a1a; /* Aztec raven vibe */
+  --header-link-hover-color-light: #ff7f7f; /* Light mode hover color */
+
+  --dark-background: #2e2b2b; /* Aztec raven vibe */
   --dark-text: #e0e0e0;
   --dark-accent: #ffcc00; /* Gold for accents */
+
+  --header-link-hover-color-dark: #ffaa00;
+}
+/* Light mode styles */
+.app.light-mode {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+
+/* Dark mode styles */
+.app.dark-mode {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
 }
