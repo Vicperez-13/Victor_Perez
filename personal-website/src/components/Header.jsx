@@ -47,6 +47,13 @@ const Header = ({ toggleTheme }) => {
               <p className="header__link">Work Experience</p>
               <p className="header__description">View my work experience</p>
             </div>
+            <div
+              className="header__nav-container"
+              onClick={() => navigate("/projects")}
+            >
+              <p className="header__link">Projects</p>
+              <p className="header__description">See my projects</p>
+            </div>
           </nav>
         )}
 

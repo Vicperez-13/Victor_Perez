@@ -6,6 +6,7 @@ import About from "./components/About";
 import Slideshow from "./components/Slideshow";
 import Socials from "./components/Socials";
 import WorkExperience from "./components/WorkExperience";
+import Projects from "./components/Projects"; // Add this import
 import "./styles/_variables.css";
 import "./styles/_mixins.css";
 import "./styles/header.css";
@@ -158,6 +159,14 @@ const App = () => {
                 <>
                   <WorkExperience />
                   <Slideshow images={workExperienceImages} />
+                </>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <>
+                  <Projects />
                 </>
               }
             />
