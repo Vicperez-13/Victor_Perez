@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A personal website built with React and Vite, featuring dark and light modes.",
   "main": "src/main.jsx",
+  "homepage": "https://vicperez-13.github.io/Victor_Perez",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",

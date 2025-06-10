@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
@@ -42,18 +42,17 @@ const App = () => {
     "https://picsum.photos/id/90/600/400",
   ];
 
-  // Generate randomized lines for the Tron-like background
   const renderLines = () => {
     const lines = [];
-    const numLines = 10; // Fewer lines for a cleaner look
+    const numLines = 10;
 
     for (let i = 0; i < numLines; i++) {
-      const isLShaped = Math.random() > 0.5; // Randomly decide if the line is L-shaped
-      const thickness = Math.random() * 2 + 1; // Random thickness between 1px and 3px
-      const length1 = Math.random() * 50 + 50; // Random length for the first segment
-      const length2 = Math.random() * 50 + 50; // Random length for the second segment
-      const offsetX = Math.random() * 100; // Random horizontal offset
-      const offsetY = Math.random() * 100; // Random vertical offset
+      const isLShaped = Math.random() > 0.5;
+      const thickness = Math.random() * 2 + 1;
+      const length1 = Math.random() * 50 + 50;
+      const length2 = Math.random() * 50 + 50;
+      const offsetX = Math.random() * 100;
+      const offsetY = Math.random() * 100;
 
       if (isLShaped) {
         // Create an L-shaped line
@@ -86,8 +85,7 @@ const App = () => {
           </div>
         );
       } else {
-        // Create a straight line (vertical or horizontal)
-        const isVertical = Math.random() > 0.5; // Randomly decide if the line is vertical or horizontal
+        const isVertical = Math.random() > 0.5;
         if (isVertical) {
           lines.push(
             <div
