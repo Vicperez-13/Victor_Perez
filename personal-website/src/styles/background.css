@@ -1,0 +1,82 @@
+.body-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--light-background);
+  overflow: hidden;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.app.dark-mode .body-background {
+  background: var(--dark-background);
+}
+
+.line {
+  position: absolute;
+  background: var(--light-accent);
+  opacity: 0.8;
+  box-shadow: 0 0 10px var(--light-accent), 0 0 20px var(--light-accent);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app.dark-mode .line {
+  background: var(--dark-accent);
+  box-shadow: 0 0 10px var(--dark-accent), 0 0 20px var(--dark-accent);
+}
+
+.line.vertical {
+  width: 3px;
+  height: 100%;
+  left: 0;
+}
+
+.line.horizontal {
+  height: 3px;
+  width: 100%;
+  top: 0;
+}
+
+.car {
+  position: absolute;
+  background: var(--light-accent);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 15px var(--light-accent), 0 0 30px var(--light-accent);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  animation: car-move 8s linear infinite;
+}
+
+.app.dark-mode .car {
+  background: var(--dark-accent);
+  box-shadow: 0 0 15px var(--dark-accent), 0 0 30px var(--dark-accent);
+}
+
+.line.vertical .car {
+  animation-name: car-move-vertical;
+}
+
+@keyframes car-move-vertical {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+
+.line.horizontal .car {
+  animation-name: car-move-horizontal;
+}
+
+@keyframes car-move-horizontal {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 110%;
+  }
+}

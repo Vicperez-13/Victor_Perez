@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Website
 
 This is a personal website built using React.js and Vite.js. The website features a dark mode with an Aztec raven vibe and a light mode with a Cinnamoroll vibe from Sanrio. 
@@ -61,3 +62,6 @@ personal-website
 ## License
 
 This project is open-source and available under the MIT License.
+=======
+link to website:https://vicperez-13.github.io/Victor_Perez/index.html
+>>>>>>> 22a23c0883f161b806f84f6e2c6df0dce18886dc
