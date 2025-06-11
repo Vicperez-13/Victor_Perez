@@ -1,0 +1,26 @@
+:root {
+  --light-background: #ffffff;
+  --light-text: #333333;
+  --light-accent: #ffb3b3;
+  --header-link-hover-color-light: #ff7f7f;
+
+  --dark-background: #2e2b2b;
+  --dark-text: #e0e0e0;
+  --dark-accent: #ffcc00;
+
+  --header-link-hover-color-dark: #ffaa00;
+
+  /* Title and icon colors */
+  --title-color-light: var(--light-accent);
+  --title-color-dark: var(--dark-accent);
+}
+
+.app.light-mode {
+  background-color: var(--light-background);
+  color: var(--light-text);
+}
+
+.app.dark-mode {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+}
